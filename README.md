@@ -99,7 +99,13 @@ aliases:
 Formula text:
 
 ```js
-(link(product).asFile().properties.fiber / link(product).asFile().properties.unit_size * quantity).round()
+(
+    link(product).asFile().properties.fiber
+    /
+    link(product).asFile().properties.unit_size
+    *
+    quantity
+).round()
 ```
 
 That's pretty much it — now just add a column with this formula to the relevant base views, and everything will work. Easy as pie (just don't forget to log it).
