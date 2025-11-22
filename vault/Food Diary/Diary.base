@@ -1,63 +1,17 @@
 summaries:
-  Range: values.filter(value.isType("number")).reduce(if(value > acc || acc == null, value, acc), null) - values.filter(value.isType("number")).reduce(if(value < acc || acc == null, value, acc), null)
-  Sum: values.reduce(acc + value, 0)
+  Sum: values.filter(value.isType("number")).reduce(acc + value, 0)
 filters:
   and:
     - file.inFolder("Food Diary/Records")
 formulas:
-  calories: |-
-    if(product == null, 0,
-        (
-            if(link(product).asFile().properties.calories == null, 0, link(product).asFile().properties.calories) 
-            /
-            if(link(product).asFile().properties.unit_size == null, 100, link(product).asFile().properties.unit_size) 
-            *
-            quantity
-        ).round()
-    )
-  protein: |-
-    if(product == null, 0,
-        (
-            if(link(product).asFile().properties.protein == null, 0, link(product).asFile().properties.protein) 
-            /
-            if(link(product).asFile().properties.unit_size == null, 100, link(product).asFile().properties.unit_size) 
-            *
-            quantity
-        ).round()
-    )
-  fat: |-
-    if(product == null, 0,
-        (
-            if(link(product).asFile().properties.fat == null, 0, link(product).asFile().properties.fat) 
-            /
-            if(link(product).asFile().properties.unit_size == null, 100, link(product).asFile().properties.unit_size) 
-            *
-            quantity
-        ).round()
-    )
-  carbs: |-
-    if(product == null, 0,
-        (
-            if(link(product).asFile().properties.carbs == null, 0, link(product).asFile().properties.carbs) 
-            /
-            if(link(product).asFile().properties.unit_size == null, 100, link(product).asFile().properties.unit_size) 
-            *
-            quantity
-        ).round()
-    )
-  water: |-
-    if(product == null, 0,
-        (
-            if(link(product).asFile().properties.water == null, 0, link(product).asFile().properties.water) 
-            /
-            if(link(product).asFile().properties.unit_size == null, 100, link(product).asFile().properties.unit_size) 
-            *
-            quantity
-        ).round()
-    )
+  calories: (link(product).asFile().properties.calories / link(product).asFile().properties.unit_size * quantity).round()
+  protein: (link(product).asFile().properties.protein / link(product).asFile().properties.unit_size * quantity).round()
+  fat: (link(product).asFile().properties.fat / link(product).asFile().properties.unit_size * quantity).round()
+  carbs: (link(product).asFile().properties.carbs / link(product).asFile().properties.unit_size * quantity).round()
+  water: (link(product).asFile().properties.water / link(product).asFile().properties.unit_size * quantity).round()
   day_is_today: day == today()
   day_is_yesterday: day == today() - "1d"
-  uom: if(product == null, "", link(product).asFile().properties.unit)
+  uom: link(product).asFile().properties.unit
 properties:
   note.day:
     displayName: Day
