@@ -10,7 +10,7 @@
 
 ### 1. Установите Templater
 
-Включите поддержку плагинов в хранилище и установите [Templater](https://github.com/SilentVoid13/Templater). Это единственный плагин сообщества, который нам понадобится.
+Включите поддержку плагинов в хранилище и установите [Templater](https://github.com/SilentVoid13/Templater).
 
 ### 2. Настройте Templater
 

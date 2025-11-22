@@ -10,7 +10,7 @@ Everything is built on plain Obsidian Bases, with a bit of automation from the T
 
 ### 1. Install Templater
 
-Enable community plugins in your vault and install [Templater](https://github.com/SilentVoid13/Templater). This is the only community plugin you'll need here.
+Enable community plugins in your vault and install [Templater](https://github.com/SilentVoid13/Templater).
 
 ### 2. Configure Templater
 
