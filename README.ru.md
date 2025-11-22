@@ -6,21 +6,22 @@
 
 ### 1. Установите Templater
 
-Включите поддержку плагинов в хранилище и установите [Templater](https://github.com/SilentVoid13/Templater). Это единственны плагин, который нам понадобится.
+Включите поддержку плагинов в хранилище и установите [Templater](https://github.com/SilentVoid13/Templater). 
 
-> [!tip]
-> Вообще-то, всё работает и без него, но Templater сильно снижает количество действий, которые нужно делать при ведении дневника.
+Это единственный плагин, который нам понадобится. Вообще-то, всё работает и без него, но Templater сильно снижает количество действий, которые нужно делать при ведении дневника.
 
 ### 2. Настройте Templater
+
+> [!tip]
+> Репозиторий содержит [файл настроек](vault/.obsidian/plugins/templater-obsidian/data.json) плагина, так что эти настройки, вероятно, делать не придётся.
+
+Установите следующие настройки:
 
 - `Template folder location` — выберите папку `Templates`.
 - `Trigger Templater on new file creation` — включите.
 - `Folder templates` — создайте две папки:
     - `Diary/Products`: `Templates/Product.md`
     - `Diary/Records`: `Templates/Record.md`
-
-> [!tip]
-> Репозиторий содержит [файл настроек](vault\.obsidian\plugins\templater-obsidian\data.json) плагина, так что эти настройки, вероятно, делать не придётся.
 
 ### 3. Создайте карточки продуктов
 
