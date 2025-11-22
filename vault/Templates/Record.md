@@ -1,19 +1,3 @@
-# ObsidianFoodiary (Bases)
-
-```
----
-calories:
-protein:
-fat:
-carbs:
-water:
-unit:
-unit_size:
-aliases:
----
-```
-
-```
 <%*
 const f = tp.file.find_tfile(tp.file.path(true));
 await app.vault.modify(f, "");
@@ -34,4 +18,3 @@ tR = output;
 
 await tp.file.rename(String(ts)) 
 -%>
-```

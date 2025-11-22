@@ -2,7 +2,7 @@ summaries:
   Sum: values.filter(value.isType("number")).reduce(acc + value, 0)
 filters:
   and:
-    - file.inFolder("Food Diary/Records")
+    - file.inFolder("Records")
 formulas:
   calories: (link(product).asFile().properties.calories / link(product).asFile().properties.unit_size * quantity).round()
   protein: (link(product).asFile().properties.protein / link(product).asFile().properties.unit_size * quantity).round()
