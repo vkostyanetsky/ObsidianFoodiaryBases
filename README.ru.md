@@ -22,8 +22,8 @@
 - `Template folder location` — выберите папку `Templates`;
 - `Trigger Templater on new file creation` — включите;
 - `Folder templates` — настройте для двух папок:
-    - `Diary/Products`: `Templates/Product.md`
-    - `Diary/Records`: `Templates/Record.md`
+    - `Products`: `Templates/Product.md`
+    - `Records`: `Templates/Record.md`
 
 ### 3. Создайте карточки продуктов
 
