@@ -4,6 +4,8 @@ This repo contains an example Obsidian vault that automatically calculates calor
 
 Everything is built on plain Obsidian Bases, with a bit of automation from the Templater plugin.
 
+![UI](base.png)
+
 ---
 
 ## 🚀 Getting started
