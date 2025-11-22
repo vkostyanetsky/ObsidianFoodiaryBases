@@ -4,7 +4,7 @@ protein:
 fat:
 carbs:
 water:
-unit:
-unit_size:
+unit: g
+unit_size: 100
 aliases:
 ---
