@@ -97,7 +97,13 @@ aliases:
 Текст формулы:
 
 ```js
-(link(product).asFile().properties.fiber / link(product).asFile().properties.unit_size * quantity).round()
+(
+    link(product).asFile().properties.fiber
+    /
+    link(product).asFile().properties.unit_size
+    *
+    quantity
+).round()
 ```
 
 Собственно, это всё, осталось добавить колонку с этой формулой в виды базы и всё будет работать.
