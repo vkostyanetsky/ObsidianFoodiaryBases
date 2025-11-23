@@ -17,7 +17,7 @@ Enable community plugins in your vault and install [Templater](https://github.co
 ### 2. Configure Templater
 
 > [!tip]
-> The repo already includes a [Templater settings file](vault/.obsidian/plugins/templater-obsidian/data.json), so you'll probably be good to go out of the box.
+> The repo already includes a Templater [settings file](vault/.obsidian/plugins/templater-obsidian/data.json), so you'll probably be good to go out of the box.
 
 Set the following options:
 
