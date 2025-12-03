@@ -64,7 +64,7 @@ Meal note properties (also created automatically by Templater):
 
 ## 👀 How to view your data
 
-The [Diary.base](Diary.base) file has three configured views:
+The [Diary.base](vault/Diary.base) file has three configured views:
 
 - **All** — all records for all time, grouped by day, with total calories/macros/water per day
 - **Today** — only today's entries
