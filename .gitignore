@@ -1,1 +1,11 @@
-.obsidian
+**/.obsidian/*
+!Calendar/vault/.obsidian/app.json
+!Calendar/vault/.obsidian/core-plugins.json
+!Calendar/vault/.obsidian/daily-notes.json
+!Calendar/vault/.obsidian/templates.json
+!Calendar/vault/.obsidian/types.json
+!Foodiary/vault/.obsidian/plugins/
+Foodiary/vault/.obsidian/plugins/*
+!Foodiary/vault/.obsidian/plugins/templater-obsidian/
+!Foodiary/vault/.obsidian/plugins/templater-obsidian/data.json
+**/.trash/

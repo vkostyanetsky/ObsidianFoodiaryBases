@@ -16,5 +16,5 @@ output += `---\n\n`;
 
 tR = output;
 
-await tp.file.rename(String(ts)) 
+await tp.file.rename(String(ts))
 -%>

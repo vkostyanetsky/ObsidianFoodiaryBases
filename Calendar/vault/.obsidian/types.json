@@ -1,0 +1,10 @@
+{
+  "types": {
+    "calendar_active": "checkbox",
+    "calendar_visible": "checkbox",
+    "calendar_icon": "text",
+    "calendar_day_of_month_day": "number",
+    "calendar_day_of_month_month": "number",
+    "calendar_days_of_week_days": "multitext"
+  }
+}

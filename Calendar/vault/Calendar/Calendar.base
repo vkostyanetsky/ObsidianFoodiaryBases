@@ -1,0 +1,70 @@
+filters:
+  and:
+    - file.inFolder("Calendar")
+    - calendar_active == true
+    - calendar_visible == true
+formulas:
+  current_file_is_date: /^\d{4}-\d{2}-\d{2}$/.matches(this.file.name)
+  current_file_date: if(formula.current_file_is_date, date(this.file.name), None)
+  trigger_day_of_month_today: (calendar_day_of_month_month == today().month || calendar_day_of_month_month == None) && today().day == calendar_day_of_month_day
+  trigger_days_of_week_today: calendar_days_of_week_days.isType("list") && calendar_days_of_week_days.contains(number(today().format("E")))
+  trigger_day_of_month_yesterday: (calendar_day_of_month_month == (today() - "1d").month || calendar_day_of_month_month == None) && (today() - "1d").day == calendar_day_of_month_day
+  trigger_days_of_week_yesterday: calendar_days_of_week_days.isType("list") && calendar_days_of_week_days.contains(number((today() - "1d").format("E")))
+  trigger_day_of_month_current_file: formula.current_file_is_date && (calendar_day_of_month_month == formula.current_file_date.month || calendar_day_of_month_month == None) && formula.current_file_date.day == calendar_day_of_month_day
+  trigger_days_of_week_current_file: formula.current_file_is_date && calendar_days_of_week_days.isType("list") && calendar_days_of_week_days.contains(number(formula.current_file_date.format("E")))
+properties:
+  file.name:
+    displayName: Task set
+  note.calendar_icon:
+    displayName: •
+views:
+  - type: table
+    name: Today
+    filters:
+      or:
+        - formula.trigger_days_of_week_today == true
+        - formula.trigger_day_of_month_today == true
+    order:
+      - calendar_icon
+      - file.name
+    sort:
+      - property: calendar_icon
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      note.calendar_icon: 24
+  - type: table
+    name: Yesterday
+    filters:
+      or:
+        - formula.trigger_days_of_week_yesterday == true
+        - formula.trigger_day_of_month_yesterday == true
+    order:
+      - calendar_icon
+      - file.name
+    sort:
+      - property: calendar_icon
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      note.calendar_icon: 24
+  - type: table
+    name: Day
+    filters:
+      and:
+        - formula.current_file_is_date == true
+        - or:
+            - formula.trigger_day_of_month_current_file == true
+            - formula.trigger_days_of_week_current_file == true
+    order:
+      - calendar_icon
+      - file.name
+    sort:
+      - property: calendar_icon
+        direction: ASC
+      - property: file.name
+        direction: ASC
+    columnSize:
+      note.calendar_icon: 24
