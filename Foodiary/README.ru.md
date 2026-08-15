@@ -1,5 +1,7 @@
 # Obsidian Foodiary (Bases) 🥪 🍎 🪵
 
+[README in English](README.md)
+
 Это пример хранилища [Obsidian](https://obsidian.md), которое автоматически считает КБЖУ для каждого приёма пищи и за день в целом.
 
 Для автоматизации используется плагин Templater, а остальное сделано на чистом Obsidian Bases.

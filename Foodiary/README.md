@@ -1,5 +1,7 @@
 # Obsidian Foodiary (Bases) 🥪 🍎 🪵
 
+[README in Russian](README.ru.md)
+
 This example Obsidian vault automatically calculates calories, protein, fat, carbs, and water — both for each individual meal and for the whole day. No more crunching numbers by hand.
 
 Everything is built on plain Obsidian Bases, with a bit of automation from the Templater plugin.

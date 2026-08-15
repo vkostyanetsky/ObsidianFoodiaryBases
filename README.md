@@ -15,4 +15,4 @@ corresponding directory below.
 
 ## 📄 License
 
-The examples are distributed under the [MIT License](LICENSE).
+All examples are released under [The Unlicense](LICENSE).

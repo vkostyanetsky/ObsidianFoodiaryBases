@@ -1,5 +1,7 @@
 # Obsidian recurring-task calendar 📆 🔁 ✅
 
+[README in Russian](README.ru.md)
+
 This example vault keeps recurring tasks as ordinary Markdown notes and uses
 [Obsidian Bases](https://help.obsidian.md/bases) to show the notes that apply to
 today, yesterday, or a dated daily note. It uses only Obsidian core plugins.
@@ -109,5 +111,3 @@ only.
 - Tasks are copied into daily notes manually; the example does not synchronize
   completion back to recurring definitions.
 - A date such as the 31st simply does not occur in shorter months.
-
-Russian documentation: [README.ru.md](README.ru.md).
