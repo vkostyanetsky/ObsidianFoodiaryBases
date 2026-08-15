@@ -2,13 +2,14 @@
 
 [README in Russian](README.ru.md)
 
-This example vault keeps recurring tasks as ordinary Markdown notes and uses
-[Obsidian Bases](https://help.obsidian.md/bases) to show the notes that apply to
-today, yesterday, or a dated daily note. It uses only Obsidian core plugins.
+This example shows how to manage recurring tasks in Obsidian without installing
+third-party plugins.
 
-The design is intentionally simple: the calendar tells you which task sets are
-due, and you copy the relevant checklist into the daily note. Completion state
-then belongs to that day rather than to the reusable recurring-task note.
+In short, it comes down to two steps:
+
+1. Store task lists as ordinary notes with recurrence settings.
+2. Use [Obsidian Bases](https://help.obsidian.md/bases) in daily notes to see
+   which tasks are due that day.
 
 ## 🚀 Try the example
 
