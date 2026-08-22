@@ -1,6 +1,6 @@
 # Obsidian Templates 🗂️ 🧩 🪨
 
-[README in Russian](README.ru.md).
+[README in Russian](README.ru.md)
 
 This repository contains examples of how to solve various tasks using Obsidian.
 Setup and migration instructions for each template are available in the
