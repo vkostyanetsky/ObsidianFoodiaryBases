@@ -11,6 +11,7 @@ corresponding directory below.
 | Template | Description | Requirements |
 | --- | --- | --- |
 | [Calendar](Calendar/README.md) | A recurring-task calendar powered by Obsidian Bases and Daily Notes | Obsidian 1.9+; no community plugins |
+| [Fastimer](Fastimer/README.md) | An intermittent-fasting log with planned and actual fast length | Obsidian 1.9+ and Templater |
 | [Foodiary](Foodiary/README.md) | A food diary that calculates calories, macros, and water | Obsidian 1.9+ and Templater |
 
 ## 📄 License

@@ -8,4 +8,8 @@
 Foodiary/vault/.obsidian/plugins/*
 !Foodiary/vault/.obsidian/plugins/templater-obsidian/
 !Foodiary/vault/.obsidian/plugins/templater-obsidian/data.json
+!Fastimer/vault/.obsidian/plugins/
+Fastimer/vault/.obsidian/plugins/*
+!Fastimer/vault/.obsidian/plugins/templater-obsidian/
+!Fastimer/vault/.obsidian/plugins/templater-obsidian/data.json
 **/.trash/

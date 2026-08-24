@@ -1,0 +1,92 @@
+filters:
+  and:
+    - file.inFolder("Records")
+formulas:
+  day_start: date(this.file.name.slice(0, 10))
+  day_end: date(this.file.name.slice(0, 10)) + "1d"
+  end_expected: (start + (duration("1h") * length)).format("YYYY-MM-DD HH:mm")
+  duration: |
+    if(
+      ((if(end, end, now()) - start).hours.floor()) < 10,
+      "0" + ((if(end, end, now()) - start).hours.floor()).toString(),
+      ((if(end, end, now()) - start).hours.floor()).toString()
+    )
+    + ":" +
+    if(
+      (((if(end, end, now()) - start).minutes % 60).round()) < 10,
+      "0" + (((if(end, end, now()) - start).minutes % 60).round()).toString(),
+      (((if(end, end, now()) - start).minutes % 60).round()).toString()
+    )
+  end_formatted: end.format("YYYY-MM-DD HH:mm")
+  start_formatted: start.format("YYYY-MM-DD HH:mm")
+  length_formatted: |
+    if(
+      (((length * 60).round() / 60).floor()) < 10,
+      "0" + (((length * 60).round() / 60).floor()).toString(),
+      (((length * 60).round() / 60).floor()).toString()
+    )
+    + ":" +
+    if(
+      ((length * 60).round() % 60) < 10,
+      "0" + ((length * 60).round() % 60).toString(),
+      ((length * 60).round() % 60).toString()
+    )
+properties:
+  file.name:
+    displayName: File
+  formula.start_formatted:
+    displayName: Start
+  formula.length_formatted:
+    displayName: Planned
+  formula.end_expected:
+    displayName: End (planned)
+  formula.duration:
+    displayName: Actual
+  formula.end_formatted:
+    displayName: End (actual)
+  note.length:
+    displayName: Plan
+views:
+  - type: table
+    name: All
+    order:
+      - formula.start_formatted
+      - formula.length_formatted
+      - formula.end_expected
+      - formula.duration
+      - formula.end_formatted
+      - file.name
+    sort:
+      - property: formula.start_formatted
+        direction: DESC
+      - property: file.name
+        direction: ASC
+      - property: start
+        direction: DESC
+    columnSize:
+      formula.length_formatted: 150
+      formula.duration: 150
+      formula.start_formatted: 160
+      formula.end_formatted: 160
+      formula.end_expected: 160
+  - type: table
+    name: Day
+    filters:
+      and:
+        - start < formula.day_end
+        - or:
+            - end > formula.day_start
+            - end == null
+    order:
+      - file.name
+      - formula.start_formatted
+      - formula.end_expected
+      - formula.end_formatted
+      - formula.duration
+    sort:
+      - property: start
+        direction: ASC
+    columnSize:
+      formula.start_formatted: 141
+      formula.end_expected: 142
+      formula.end_formatted: 140

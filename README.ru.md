@@ -10,6 +10,7 @@
 | Шаблон | Описание | Требования |
 | --- | --- | --- |
 | [Calendar](Calendar/README.ru.md) | Календарь периодических задач на Obsidian Bases и ежедневных заметках | Obsidian 1.9+; плагины сообщества не нужны |
+| [Fastimer](Fastimer/README.ru.md) | Журнал интервального голодания с плановой и фактической длительностью фастов | Obsidian 1.9+ и Templater |
 | [Foodiary](Foodiary/README.ru.md) | Дневник питания с расчётом КБЖУ и воды | Obsidian 1.9+ и Templater |
 
 ## 📄 Лицензия
